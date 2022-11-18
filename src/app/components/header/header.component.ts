@@ -8,8 +8,18 @@ import { faMoon } from '@fortawesome/free-solid-svg-icons';
 export class HeaderComponent implements OnInit {
   //variables
   faMoon = faMoon;
-
+  theme: string = 'light';
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    document.documentElement.classList.add(this.theme);
+  }
+
+  //functions
+
+  changeTheme() {
+    document.documentElement.classList.remove(this.theme);
+    this.theme = this.theme === 'light' ? 'dark' : 'light';
+    document.documentElement.classList.add(this.theme);
+  }
 }

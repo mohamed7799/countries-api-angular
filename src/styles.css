@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  height: 100%;
+}
+
 body {
+  min-height: 100vh;
+  display: flex;
   font-family: "Inter", sans-serif;
 }
